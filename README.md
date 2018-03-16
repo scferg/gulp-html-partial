@@ -83,13 +83,15 @@ gulp.task('html', function () {
 const defaults = {
         basePath: '',
         tagName: 'partial',
-        variablePrefix: '@@'
+        variablePrefix: '@@',
+        prettify: true
     }
 ```
 
 - `basePath` - base path for your partials, relative to `gulpfile.js`
 - `tagName` - name of your partial tag, must have at least `src` attribute with path to partial file
 - `variablePrefix` - prefix of variable keys passed as attributes into partials
+- `prettify` - whether or not to use html.prettyPrint in injected HTML
  
 
 # Notes
