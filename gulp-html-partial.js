@@ -106,7 +106,7 @@ module.exports = (function () {
      */
     function replaceAttributes(file, attributes) {
         return (attributes || []).reduce((html, attrObj) =>
-            html.replace(options.variablePrefix + attrObj.key, attrObj.value), file && file.toString() || '');
+            html.replace(new RegExp(options.variablePrefix + attrObj.key, 'g'), attrObj.value), file && file.toString() || '');
     }
 
     /**
